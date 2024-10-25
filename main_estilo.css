@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Cormorant_garamond';
+    src: url(Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+}
+
 #quadrado{
     width: 150px;
     height: 150px;
@@ -12,14 +17,14 @@
 }
 
 #cabecalho{
-    background-color: #000000;
+    background-color: #FFE9EE;
     color: white;
-    height: 50px;
+    height: 132px;
 }
 #div1{
     height: 500px;
     color: blueviolet;
-    background-color:#FFD500;    
+    background-color: #C0334F;    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,15 +128,16 @@
     justify-content: center;
     width: 400px;
     height: 200px;
-    color: black;
+    color: #FFE9EE;
     background-color: transparent;
     flex-direction: row;
+
 }
 
 #resposta{
     width: 400px;
     height: 100px;
-    background-color: red;
+    background-color: transparent;
    
     
 }
@@ -143,5 +149,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: transparent;
+    font-family: 'Cormorant_garamond',sans-serif;
+    font-size: 20px;
+}
+
+#Logo{
+    padding-left: 200px;
 }

@@ -11,7 +11,7 @@ function Avancar(sim_ou_nao){
         respostas_sim_TDAH++;
     }
     if(questao_atual==51){
-        pergunta.innerHTML="Você identificou "+ respostas_sim_TDAH + " sintomas de TDAH na nossa avaliação. Isso significa que você apresenta muitos comportamentos comuns a esse funcionamento. O próximo passo agora é agendar sua Avaliação Psicólogica para descobrir se realmente você tem TDAH ou não. Este teste é apenas para auto conhecimento, mas não é um diagnóstico. O diagnóstico só pode ser dado por um profissional especializado, que utiliza técnicas e instrumentos validados científicamente";
+        pergunta.innerHTML="<p>Você identificou <strong> "+ respostas_sim_TDAH + " </strong> sintomas de TDAH na nossa avaliação. Isso significa que você apresenta muitos comportamentos comuns a esse funcionamento. O próximo passo agora é agendar sua Avaliação Psicólogica para descobrir se realmente você tem TDAH ou não. Este teste é apenas para auto conhecimento, mas não é um diagnóstico. O diagnóstico só pode ser dado por um profissional especializado, que utiliza técnicas e instrumentos validados científicamente.</p>";
         remover=window.document.querySelector('#resposta');
         remover.removeChild(botao_sim);
         remover.removeChild(botao_nao);
@@ -20,7 +20,7 @@ function Avancar(sim_ou_nao){
 }
 
 function Mudar_cor_entrou_sim(){
-    window.document.querySelector("#sim").style.backgroundColor="green";
+    window.document.querySelector("#sim").style.backgroundColor="#F58AA6";
 }
 
 function Mudar_cor_saiu_sim(){
@@ -28,7 +28,7 @@ function Mudar_cor_saiu_sim(){
 }
 
 function Mudar_cor_entrou_nao(){
-    window.document.querySelector("#nao").style.backgroundColor="green";
+    window.document.querySelector("#nao").style.backgroundColor="#F58AA6";
 }
 
 function Mudar_cor_saiu_nao(){
@@ -36,7 +36,7 @@ function Mudar_cor_saiu_nao(){
 }
 
 function Mudar_cor_entrou_comecar(){
-    trocar=window.document.querySelector('#comecar').style.backgroundColor="green";
+    trocar=window.document.querySelector('#comecar').style.backgroundColor="#F58AA6";
 }
 
 function Mudar_cor_saiu_comecar(){
