@@ -84,7 +84,7 @@
 
 #sim{
     width: 100%;
-    height: 20%;
+    height: 50%;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -102,8 +102,46 @@
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    height: 20%;
+    height: 50%;
     font-size: 40px;
     background-color: transparent;
     border-radius: 20px 20px 20px 20px;
+    
+}
+
+#comecar{
+    width: 100%;
+    height: 30%;
+    color: #000000;
+    border-radius: 20px;
+    
+}
+#questionario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    color: black;
+    background-color: transparent;
+    flex-direction: row;
+}
+
+#resposta{
+    width: 400px;
+    height: 100px;
+    background-color: red;
+   
+    
+}
+
+#TDAH{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
 }
