@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Cormorant_garamond',sans-serif;
 }
 
 @font-face {
@@ -20,6 +21,12 @@
     background-color: #FFE9EE;
     color: white;
     height: 132px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 #div1{
     height: 500px;
@@ -28,19 +35,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 132px;
 }
 
 
 #div2{
     height: 800px;
     color: black;
-    background-color: white;
+    background-color: #C0334F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #div3{
     height: 600px;
     color: black;
     background-color: #2C878D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #div4{
@@ -95,7 +109,8 @@
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    color: #000000;
+    color: #C0334F;
+    background-color: #FFE9EE;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px 20px 20px 20px;
 }
@@ -104,23 +119,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #C0334F;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 50%;
     font-size: 40px;
     background-color: transparent;
     border-radius: 20px 20px 20px 20px;
+    background-color: #FFE9EE;
     
 }
 
 #comecar{
     width: 100%;
     height: 30%;
-    color: #000000;
+    color: #C0334F;
     border-radius: 20px;
-    
+    font-size: 25px;
 }
+
+#comecar_DASS21{
+    width: 475px;
+    height: 60px;
+    border-radius: 20px;
+    color: #C0334F;
+    background-color: #FFE9EE;
+    font-size: 25px;
+}
+
+
 #questionario{
     display: flex;
     flex-direction: column;
@@ -138,8 +165,6 @@
     width: 400px;
     height: 100px;
     background-color: transparent;
-   
-    
 }
 
 #TDAH{
@@ -156,4 +181,85 @@
 
 #Logo{
     padding-left: 200px;
+}
+
+#dass21{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    background-color:#C0334F;
+    flex-direction: column ;
+}
+
+#perguntas_DASS21{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    color:#FFE9EE;
+}
+
+#respostas_DASS21{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#opcoes_DASS21{
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    font-family:'cormorant_garamond',sans-serif;
+    font-size: large;
+}
+
+#botao_0_dass21{
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    color: #C0334F;
+    font-size: 17px;
+}
+
+#botao_1_dass21{
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    color: #C0334F;
+    font-size: 17px;
+}
+
+#botao_2_dass21{
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    color: #C0334F;
+    font-size: 17px;
+}
+
+#botao_3_dass21{
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    color: #C0334F;
+    font-size: 17px;
+}
+
+#teste_autismo{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+#teste_autismo_perguntas{
+    width: 500px;
+    height: 200px;
+    background-color:chartreuse;
+}
+
+#teste_autismo_respostas{
+    width: 500px;
+    height: 200px;
+    background-color: #C0334F;
 }
