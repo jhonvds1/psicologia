@@ -10,13 +10,6 @@
     src: url(Cormorant_Garamond/CormorantGaramond-Bold.ttf);
 }
 
-#quadrado{
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    border-radius: 10px;
-}
-
 #cabecalho{
     background-color: #FFE9EE;
     color: white;
@@ -30,7 +23,6 @@
 }
 #div1{
     height: 500px;
-    color: blueviolet;
     background-color: #C0334F;    
     display: flex;
     justify-content: center;
@@ -41,7 +33,6 @@
 
 #div2{
     height: 800px;
-    color: black;
     background-color: #C0334F;
     display: flex;
     align-items: center;
@@ -50,8 +41,7 @@
 
 #div3{
     height: 600px;
-    color: black;
-    background-color: #2C878D;
+    background-color: #C0334F;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,8 +49,10 @@
 
 #div4{
     height: 1600px;
-    color: white;
-    background-color: black;
+    background-color:#C0334F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #div5{
@@ -83,7 +75,6 @@
 
 #perguntas{
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
     text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     margin-top: 20px;
@@ -111,8 +102,10 @@
     font-size: 40px;
     color: #C0334F;
     background-color: #FFE9EE;
-    font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px 20px 20px 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #nao{
@@ -120,14 +113,15 @@
     justify-content: center;
     align-items: center;
     color: #C0334F;
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 50%;
     font-size: 40px;
     background-color: transparent;
     border-radius: 20px 20px 20px 20px;
     background-color: #FFE9EE;
-    
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #comecar{
@@ -136,6 +130,9 @@
     color: #C0334F;
     border-radius: 20px;
     font-size: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #comecar_DASS21{
@@ -145,6 +142,9 @@
     color: #C0334F;
     background-color: #FFE9EE;
     font-size: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 
@@ -158,7 +158,6 @@
     color: #FFE9EE;
     background-color: transparent;
     flex-direction: row;
-
 }
 
 #resposta{
@@ -211,6 +210,9 @@
     border-radius: 20px;
     font-family:'cormorant_garamond',sans-serif;
     font-size: large;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #botao_0_dass21{
@@ -219,6 +221,9 @@
     border-radius: 20px;
     color: #C0334F;
     font-size: 17px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #botao_1_dass21{
@@ -227,6 +232,9 @@
     border-radius: 20px;
     color: #C0334F;
     font-size: 17px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #botao_2_dass21{
@@ -235,6 +243,9 @@
     border-radius: 20px;
     color: #C0334F;
     font-size: 17px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #botao_3_dass21{
@@ -243,6 +254,9 @@
     border-radius: 20px;
     color: #C0334F;
     font-size: 17px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
 }
 
 #teste_autismo{
@@ -250,16 +264,79 @@
     height: 400px;
     display: flex;
     flex-direction: column;
+    color:#FFE9EE;
 }
 
 #teste_autismo_perguntas{
     width: 500px;
     height: 200px;
-    background-color:chartreuse;
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    text-indent: 20px;
 }
 
 #teste_autismo_respostas{
     width: 500px;
     height: 200px;
-    background-color: #C0334F;
+    background-color: transparent;
 }
+
+.autismo_botao{
+    width: 275px;
+    height: 60px;
+    border-radius: 20px;
+    color: #C0334F;
+    font-size: 25px; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
+}
+
+.autismo_botao_opcoes{
+    width: 100%;
+    height: 25%;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E9AFBE;
+    color:#C0334F;
+    font-size: 20px;
+}
+
+#altas_habilidades{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#perguntas_altas_habilidades{
+    width: 500px;
+    height: 200px;
+    background-color: transparent;
+    display: flex;
+    gap: 20px;
+    color:#FFE9EE;
+    text-indent: 8px;
+}
+
+#respostas_altas_habilidades{
+    width: 500px;
+    height: 200px;
+    background-color: transparent;
+}
+
+.habilidades_botao_opcoes{
+    width: 100%;
+    height: 33.3%;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: #E9AFBE;
+    color:#C0334F;
+    font-size: 20px;
+}
+
+

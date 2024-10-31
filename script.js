@@ -14,6 +14,8 @@ questao_atual_DASS21=0;
 escala_depressao_DASS21=0;
 escala_ansiedade_DASS21=0;
 escala_estresse_DASS21=0;
+questao_atual_autismo=0;
+questao_atual_altas_habilidades=0;
 
 function Avancar(sim_ou_nao){
     pergunta.innerHTML=questions[questao_atual];
@@ -63,6 +65,7 @@ function Mudar_cor_saiu_comecar(){
 
 
 function Comecar_TDAH(){
+    pergunta.style.textIndent="20px";
     escrever_pergunta=window.document.querySelector("#questionario");
     escrever_pergunta.innerHTML=questions[questao_atual];
     questao_atual++;
@@ -97,6 +100,7 @@ function Mudar_cor_saiu_comecar_DASS21(){
 }
 
 function Instrucoes_DASS21(){
+    window.document.querySelector("#perguntas_DASS21").style.textIndent="20px";
     window.document.querySelector("#perguntas_DASS21").removeChild(comecar_DASS21);
     window.document.querySelector('#perguntas_DASS21').style.fontSize="30px";
     window.document.querySelector('#perguntas_DASS21').innerHTML="Por favor, leia cuidadosamente cada uma das afirmações e assinale o número apropriado 0, 1, 2 ou 3. A pontuação indicará o quanto ela se aplicou a você durante a última semana, conforme a indicação a seguir";
@@ -255,6 +259,126 @@ function Mudar_cor_opcoes_dass21_3_entrou(){
 function Mudar_cor_opcoes_dass21_3_saiu(){
     window.document.querySelector('#botao_3_dass21').style.backgroundColor="#FFE9EE";
 }
+
+function Mudar_cor_botao_geral_entrou(){
+    event.target.style.backgroundColor="#F58AA6";
+}
+
+function Mudar_cor_botao_geral_saiu(){
+    event.target.style.backgroundColor="";
+}
+
+function Instrucoes_autismo(){
+    window.document.querySelector("#teste_autismo_perguntas").removeChild(botao_autismo_comecar);
+    pergunta_autismo=window.document.querySelector("#teste_autismo_perguntas").innerHTML="Marque o quanto você<br> se identifica com cada<br> uma das afirmações a seguir"
+    add_botao=document.createElement("button");
+    add_botao.id="avancar_autismot";
+    add_botao.textContent="Começar Avaliação";
+    add_botao.className="autismo_botao";
+    add_botao.onclick=Comecar_avaliacao_autismo;
+    add_botao.onmouseenter=Mudar_cor_botao_geral_entrou;
+    add_botao.onmouseleave=Mudar_cor_botao_geral_saiu;
+    window.document.querySelector("#teste_autismo_perguntas").appendChild(add_botao);
+}
+
+function Comecar_avaliacao_autismo(){
+    window.document.querySelector("#teste_autismo_perguntas").innerHTML=questions_autismo[questao_atual_autismo];
+    questao_atual_autismo++;
+    botao_nunca=document.createElement('button');
+    botao_nunca.id="botao_nunca";
+    botao_nunca.textContent="Nunca foi verdadeiro"
+    botao_nunca.className="autismo_botao_opcoes";
+    botao_nunca.onclick=Avancar_autismo;
+    botao_nunca.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_nunca.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_menos16=document.createElement('button');
+    botao_menos16.id="botao_menos16";
+    botao_menos16.textContent="Verdadeiro apenas quando eu tinha menos de 16 anos"
+    botao_menos16.className="autismo_botao_opcoes";
+    botao_menos16.onclick=Avancar_autismo;
+    botao_menos16.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_menos16.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_atualmente=document.createElement('button');
+    botao_atualmente.id="botao_atualmente";
+    botao_atualmente.textContent="Verdadeiro apenas atualmente";
+    botao_atualmente.className="autismo_botao_opcoes";
+    botao_atualmente.onclick=Avancar_autismo;
+    botao_atualmente.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_atualmente.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_verdadeiro=document.createElement('button');
+    botao_verdadeiro.id="botao_verdadeiro";
+    botao_verdadeiro.textContent="Verdadeiro hoje e quando eu era jovem";
+    botao_verdadeiro.className="autismo_botao_opcoes";
+    botao_verdadeiro.onclick=Avancar_autismo;
+    botao_verdadeiro.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_verdadeiro.onmouseleave=Mudar_cor_botao_geral_saiu;
+    respostas_autismo=window.document.querySelector("#teste_autismo_respostas");
+    respostas_autismo.appendChild(botao_nunca);
+    respostas_autismo.appendChild(botao_menos16);
+    respostas_autismo.appendChild(botao_atualmente);
+    respostas_autismo.appendChild(botao_verdadeiro);
+}
+
+
+
+function Avancar_autismo(){
+    pergunta_autismo=window.document.querySelector("#teste_autismo_perguntas");
+    pergunta_autismo.innerHTML=questions_autismo[questao_atual_autismo];
+    questao_atual_autismo++;
+    if(questao_atual_autismo==81){
+        remover=window.document.querySelector("#teste_autismo_respostas");
+        remover.removeChild(botao_nunca);
+        remover.removeChild(botao_menos16);
+        remover.removeChild(botao_atualmente);
+        remover.removeChild(botao_verdadeiro);
+    }
+}
+
+function Comecar_altas_habilidades(){
+    window.document.querySelector("#perguntas_altas_habilidades").style.fontSize="25px";
+    perguntas_altas_habilidades=window.document.querySelector("#perguntas_altas_habilidades");
+    perguntas_altas_habilidades.removeChild(comecar_altas_habilidades);
+    perguntas_altas_habilidades.innerHTML=questions_altas_habilidades[questao_atual_altas_habilidades];
+    questao_atual_altas_habilidades++;
+    respostas=document.querySelector("#respostas_altas_habilidades");
+    botao_nunca_habilidades=document.createElement("button");
+    botao_asvezes=document.createElement("button");
+    botao_frequentemente=document.createElement("button");
+    botao_nunca_habilidades.className="habilidades_botao_opcoes";
+    botao_asvezes.className="habilidades_botao_opcoes";
+    botao_frequentemente.className="habilidades_botao_opcoes";
+    botao_nunca_habilidades.textContent="Nunca";
+    botao_asvezes.textContent="Às vezes";
+    botao_frequentemente.textContent="Frequentemente";
+    botao_nunca_habilidades.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_nunca_habilidades.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_nunca_habilidades.onclick=Avancar_altas_habilidades;
+    botao_nunca_habilidades.id="botao_nunca_habilidades";
+    botao_asvezes.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_asvezes.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_asvezes.onclick=Avancar_altas_habilidades;
+    botao_asvezes.id="botao_asvezes";
+    botao_frequentemente.onmouseenter=Mudar_cor_botao_geral_entrou;
+    botao_frequentemente.onmouseleave=Mudar_cor_botao_geral_saiu;
+    botao_frequentemente.onclick=Avancar_altas_habilidades;
+    botao_frequentemente.id="botao_frequentemente";
+    respostas.appendChild(botao_nunca_habilidades);
+    respostas.appendChild(botao_asvezes);
+    respostas.appendChild(botao_frequentemente);
+}
+
+function Avancar_altas_habilidades(){
+    pergunta=document.querySelector("#perguntas_altas_habilidades");
+    pergunta.innerHTML=questions_altas_habilidades[questao_atual_altas_habilidades];
+    questao_atual_altas_habilidades++;
+    if(questao_atual_altas_habilidades==38){
+        remover=document.querySelector("#respostas_altas_habilidades");
+        remover.removeChild(botao_nunca_habilidades);
+        remover.removeChild(botao_asvezes);
+        remover.removeChild(botao_frequentemente);
+    }
+}
+
 
 
 
