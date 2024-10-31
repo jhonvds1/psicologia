@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicologia</title>
-    <link rel="stylesheet" href="main_estilo.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_estilo.css') }}">
 </head>
 <body>
     <header id="cabecalho">
-        <img src="Anielly Costa_horizontal4x.png" alt="Logo_Psicologa" id="Logo">
+        <img src=" {{ url_for('static', filename='img/Anielly Costa_horizontal4x.png') }}" alt="Logo_Psicologa" id="Logo">
     </header>
     <section id="div1">
         <div id="TDAH">
@@ -79,6 +79,6 @@
         
     </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
