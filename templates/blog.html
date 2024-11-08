@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog_estilo.css') }}">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Meu Blog</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Início</a></li>
+                    <li><a href="/sobre">Sobre</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="container">
+            <div class="postagem">
+                <h2><a href="/post/1"> aa</a></h2>
+                <p class="autor">Por João Silva - 10 de Novembro, 2024</p>
+                <p class="resumo">Neste post, vamos aprender como criar um blog do zero, escolhendo a melhor plataforma e configurando o ambiente...</p>
+                <a href="/post/1">Leia mais</a>
+            </div>
+
+            <div class="postagem">
+                <h2><a href="/post/2">Dicas para Escrever Artigos Atraentes</a></h2>
+                <p class="autor">Por Maria Souza - 8 de Novembro, 2024</p>
+                <p class="resumo">Escrever artigos que prendam a atenção dos leitores exige prática. Confira as melhores dicas para escrever conteúdos de sucesso...</p>
+                <a href="/post/2">Leia mais</a>
+            </div>
+
+            
+            {% for post in posts %}
+            <div class="postagem">
+                <li>
+                    <h2><a href="/post/2">{{post.Titulo}}</a></h2>
+                <p class="autor">{{post.Autor}}</p>
+                <p class="resumo">{{post.Materia}}</p>
+                <a href="/post/2">Leia mais</a>
+                </li>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+            <p><a href="/termos">Termos de uso</a> | <a href="/privacidade">Política de Privacidade</a></p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</body>
+</html>
