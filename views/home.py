@@ -5,7 +5,7 @@ home_route=Blueprint('home',__name__)
 
 @home_route.route("/")
 def homepage():
-    return render_template("main.html")
+    return render_template("mainteste.html")
 
 @home_route.route("/inserir_blog")
 def home_blog():

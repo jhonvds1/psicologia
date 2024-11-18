@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Cormorant_garamond';
+    src: url('fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf') format('truetype');
+}
+
+*{
+    font-family: 'Cormorant_garamond',sans-serif;
+    
+}
+
+.navbar{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.navbar-nav{
+    gap: 10%;
+}
+
+.container-fluid{
+    background-color: #C0334F;
+}
+
+.dropdown-item{
+    color: #FFE9EE;
+}
+
+.dropdown-menu{
+    background-color: #C0334F;
+}
+
+body{
+    background-color: #FFE9EE;
+}
+
+
+.Imagem_psicologa{
+    height: 400px;
+    width: 40%;
+}
+
+.Apresentacao{
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+
+.imagem{
+    height: auto;
+    max-width: 100%;
+    border-radius: 40px;
+    max-height: 400px;
+    padding: 5%;
+}
+
+.Apresentacao_psicologa{
+    height: 400px;
+    width: 100%;
+    padding-top: 1%;
+    color: #C0334F;
+    font-size: 20px;
+}
+
+.Apresentacao_psicologa h2{
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .Apresentacao_psicologa{
+        font-size: 17px;
+    }
+}
+
+@media(max-width:1346px){
+    .Apresentacao_psicologa{
+        overflow-y:scroll;
+    }
+}
+
