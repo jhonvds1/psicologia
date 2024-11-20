@@ -4,13 +4,14 @@
 }
 
 *{
-    font-family: 'Cormorant_garamond',sans-serif;
+    font-family: sans-serif;
     
 }
 
 .navbar{
     padding-top: 0%;
     padding-bottom: 0%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra aplicada */
 }
 
 .navbar-nav{
@@ -59,6 +60,7 @@ body{
     padding-top: 1%;
     color: #C0334F;
     font-size: 20px;
+    text-indent: 5%;
 }
 
 .Apresentacao_psicologa h2{
@@ -77,3 +79,97 @@ body{
     }
 }
 
+.card{
+    background-color: #FFE9EE;
+    border: none;
+    color: #C0334F;
+    font-size: 20px;
+    text-indent: 5%;
+}
+
+.servicos{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background-color: #C0334F;
+    border: none;
+    color: #FFE9EE;
+    width: 100%;
+}
+
+.boas-vindas{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem-boas-vindas{
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    flex-shrink: 0;
+}
+
+.divimgboas-vindas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.recepcao{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.recepcao h2{
+    padding-top: 5%;
+    font-size: 60px;
+    color: #C0334F;
+    font-weight: bold;
+}
+
+.recepcao p{
+    padding-top: 5%;
+    font-size: 30px;
+    text-indent: 5%;
+    padding-left: 5%;
+    color: #C0334F;
+}
+
+.produtos{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    gap: 3%;
+    padding: 1%;
+    justify-content: center;
+}
+
+.produto{
+    border-radius: 20px;
+    height: 100%;
+    width: 16%;
+    background-color: #C0334F;
+    justify-content: center;
+    display: flex;
+}
+
+.imgproduto{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.produtos p{
+    position: absolute;
+    color: #FFE9EE;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
